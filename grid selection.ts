@@ -1,5 +1,5 @@
 import { fromEvent, EMPTY, of, operators } from "npm:rxjs;
-const { switchMap, scan, takeUntil, filter, tap, startWith, map } = rxjs;
+const { switchMap, scan, takeUntil, filter, tap, startWith, map } = operators;
 
 // --- A. STYLES & CONFIGURATION ---
 
