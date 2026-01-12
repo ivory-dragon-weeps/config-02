@@ -2,7 +2,7 @@ function escapeCsvField(field) {
     return `"` + String(field ?? "").trim().replace(/"/g, `""`) + `"`;
 }
 
-export async function toCSV(objectArray) {
+async function toCSV(objectArray) {
   // Ensures we can actually download stuff 
   await new Promise(res => setTimeout(res, 200));
   document.body.focus();
@@ -41,7 +41,7 @@ export async function toCSV(objectArray) {
   document.body.style = `filter: contrast(0.5) brightness(1.3) sepia(0.9)`
 }
 
-export const downloadCsv = (filename) => (text) => Object.assign(document.createElement("a"), {
+const downloadCsv = (filename) => (text) => Object.assign(document.createElement("a"), {
     href: "data:text/csv;charset=utf-8," + encodeURIComponent(text),
     download: filename
 }).click();
