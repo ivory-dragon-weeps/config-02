@@ -38,7 +38,7 @@ async function toCSV(objectArray) {
 
   await navigator.clipboard.writeText(csvString);
   // Signal that we're done capturing this page.
-  document.body.style = `filter: contrast(0.5) brightness(1.3) sepia(0.9)`
+  document.body.style = `filter: contrast(0.5) brightness(0.8) sepia(0.9)`
 }
 
 const downloadCsv = (filename) => (text) => Object.assign(document.createElement("a"), {
